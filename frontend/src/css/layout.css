@@ -1,0 +1,147 @@
+/* ---------- Global styles ---------- */
+h1 {
+    margin-top: 0px;
+}
+
+strong {
+    color: blue;
+}
+
+.input-container {
+    display: grid;
+    grid-template-columns: calc(66% - 3px) calc(34% - 2px);
+    column-gap: 5px;
+}
+
+.table-container {
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 2px;
+    margin-bottom: 5px;
+    overflow: hidden;
+    border-color: #77f;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th {
+    padding: 10px;
+    background-color: #ccf;
+}
+td {
+    padding: 10px;
+}
+
+/* Custom inputs */
+input[type='text'],
+input[type='number'],
+input[type='submit'],
+button {
+    background-color: #fff;
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 2px;
+    padding: 3px 5px;
+    margin: 4px 0px;
+    border-color: blue;
+    width: 100%;
+    height: 40px;
+}
+input[type='number'],
+input[type='text'] {
+    width: calc(100% - 14px);
+    height: calc(40px - 10px);
+}
+
+/* Normal button */
+button:not(.red):not(.green),
+input[type='submit']:not(.red):not(.green) {
+    color: blue;
+}
+button:hover:not(.red):not(.green),
+input[type='submit']:hover:not(.red):not(.green) {
+    background-color: #eef;
+}
+button:active:not(.red):not(.green),
+input[type='submit']:active:not(.red):not(.green) {
+    background-color: #ccf;
+}
+button:disabled:not(.red):not(.green),
+input[type='submit']:disabled:not(.red):not(.green) {
+    color: #aaf !important;
+    border-color: #aaf !important;
+    background-color: #eef !important;
+}
+
+/* Red button */
+.red {
+    color: red !important;
+    border-color: red !important;
+}
+.red:hover {
+    background-color: #fee !important;
+}
+.red:active {
+    background-color: #fcc !important;
+}
+.red:disabled {
+    color: #faa !important;
+    border-color: #faa !important;
+    background-color: #fee !important;
+}
+
+/* Green button */
+.green {
+    color: #0a0 !important;
+    border-color: #0a0 !important;
+}
+.green:hover {
+    background-color: #efe !important;
+}
+.green:active {
+    background-color: #cfc !important;
+}
+.green:disabled {
+    color: #afa !important;
+    border-color: #afa !important;
+    background-color: #afe !important;
+}
+
+/* Hide up and down buttons from number input */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+/* Firefox */
+input[type='number'] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+/* ---------- Layout.html ---------- */
+body {
+    max-width: 25em;
+    margin: auto;
+    padding: 30px;
+    padding-top: 20px;
+}
+
+.content {
+    padding-bottom: 20px;
+    min-height: calc(100vh - 60px - 148px - 3px);
+}
+
+.footer {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #eef;
+    border-radius: 5px;
+    height: 118px;
+}
+.footer p {
+    margin: 3px 0px;
+    text-align: center;
+}

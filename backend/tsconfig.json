@@ -1,0 +1,24 @@
+{
+    "compilerOptions": {
+        "lib": ["es2023"],
+        "module": "ESNext",
+        "moduleResolution": "Bundler",
+        "target": "ESNext",
+
+        "baseUrl": "src",
+        "noEmit": true,
+        "outDir": "dist",
+        "paths": { "@/common/*": ["../../common/*"] },
+
+        "allowArbitraryExtensions": false,
+        "esModuleInterop": true,
+        "experimentalDecorators": true,
+        "noImplicitAny": true,
+        "noImplicitReturns": true,
+        "pretty": true,
+        "resolveJsonModule": true,
+        "skipLibCheck": true,
+        "strict": true
+    },
+    "include": ["src"]
+}

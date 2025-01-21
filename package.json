@@ -1,0 +1,37 @@
+{
+    "name": "lappupeli",
+    "description": "An online game made using React and NodeJS.",
+    "homepage": "https://github.com/bntti/ts-lappupeli#readme",
+    "bugs": {
+        "url": "https://github.com/bntti/ts-lappupeli/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/bntti/ts-lappupeli.git"
+    },
+    "scripts": {
+        "lint": "eslint .",
+        "lint:fix": "eslint . --fix"
+    },
+    "devDependencies": {
+        "@eslint/compat": "^1.2.5",
+        "@eslint/js": "^9.18.0",
+        "@types/node": "^22.10.7",
+        "eslint": "^9.18.0",
+        "eslint-config-prettier": "^10.0.1",
+        "eslint-plugin-import": "^2.29.1",
+        "eslint-plugin-prettier": "^5.2.3",
+        "eslint-plugin-react": "^7.37.4",
+        "eslint-plugin-react-hooks": "^5.1.0",
+        "eslint-plugin-react-refresh": "^0.4.18",
+        "eslint-plugin-unicorn": "^56.0.1",
+        "globals": "^15.14.0",
+        "prettier": "^3.4.2",
+        "prettier-plugin-jsdoc": "^1.3.2",
+        "typescript": "^5.7.3",
+        "typescript-eslint": "^8.21.0"
+    },
+    "engines": {
+        "node": "^22"
+    }
+}

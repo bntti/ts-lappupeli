@@ -1,0 +1,23 @@
+{
+    "name": "lappupeli-backend",
+    "version": "1.0.0",
+    "scripts": {
+        "build": "tsc && node ./esbuild.mjs",
+        "dev": "tsx watch src/index.ts",
+        "start": "node --enable-source-maps dist/index.mjs"
+    },
+    "dependencies": {
+        "express": "^5.0.1",
+        "socket.io": "^4.8.1",
+        "zod": "^3.24.1"
+    },
+    "devDependencies": {
+        "@types/express": "^5.0.0",
+        "esbuild": "^0.24.2",
+        "tsx": "^4.19.2",
+        "typescript": "^5.7.3"
+    },
+    "engines": {
+        "node": "^22"
+    }
+}
