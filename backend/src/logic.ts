@@ -16,24 +16,24 @@ export const generateRoom = (id: number, name: string): Room => ({
 });
 
 export const handleJoin = (room: Room, player: string): void => {
-    assert(!room.data.roundInProgress);
-    assert(!room.data.players.includes(player));
+    assert.ok(!room.data.roundInProgress);
+    assert.ok(!room.data.players.includes(player));
 
     room.data.players.push(player);
 };
 
 export const handleLeave = (room: Room, player: string): void => {
-    assert(!room.data.roundInProgress);
-    assert(room.data.players.includes(player));
+    assert.ok(!room.data.roundInProgress);
+    assert.ok(room.data.players.includes(player));
 
     const playerI = room.data.players.indexOf(player);
     room.data.players.splice(playerI, 1);
 };
 
 export const startRound = (room: Room): void => {
-    assert(!room.data.roundInProgress);
-    assert(room.data.players.length >= 2);
-    assert(room.data.cards.length > 0);
+    assert.ok(!room.data.roundInProgress);
+    assert.ok(room.data.players.length >= 2);
+    assert.ok(room.data.cards.length > 0);
 
     const cardI = Math.floor(Math.random() * room.data.cards.length);
     const card = room.data.cards.splice(cardI, 1)[0];
@@ -50,7 +50,7 @@ export const startRound = (room: Room): void => {
 };
 
 export const endRound = (room: Room): void => {
-    assert(room.data.roundInProgress);
+    assert.ok(room.data.roundInProgress);
 
     room.data = {
         players: room.data.players,

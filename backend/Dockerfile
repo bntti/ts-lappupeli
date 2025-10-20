@@ -1,4 +1,4 @@
-FROM node:22-alpine AS build
+FROM node:24-alpine AS build
 
 WORKDIR /app
 RUN mkdir backend common
@@ -23,7 +23,7 @@ COPY backend/src ./src
 RUN yarn build
 
 
-FROM node:22-alpine AS app
+FROM node:24-alpine AS app
 WORKDIR /app
 
 ENV NODE_ENV=production
