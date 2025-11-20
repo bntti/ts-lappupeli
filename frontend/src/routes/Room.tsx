@@ -33,7 +33,7 @@ const RoomRoute = (): JSX.Element => {
     };
     const addCard = (event: SyntheticEvent): void => {
         event.preventDefault();
-        socket.emit('addCard', roomId, newCard);
+        socket.emit('addCard', roomId, { card: newCard, player: user.username });
         setNewCard('');
     };
     const viewCard = (event: SyntheticEvent): void => {

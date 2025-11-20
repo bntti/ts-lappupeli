@@ -96,7 +96,7 @@ const runServer = (): void => {
             if (!validateRoomId(roomId, socket.rooms)) return;
 
             const room = rooms[roomId];
-            if (card.trim().length > 0) room.data.cards.push(card);
+            if (card.card.trim().length > 0) room.data.cards.push(card);
 
             io.to(roomId.toString()).emit('roomState', rooms[roomId]);
         });

@@ -1,4 +1,4 @@
-import type { Room } from './room';
+import type { Card, Room } from './room';
 
 export type ServerToClientEvents = {
     rooms: (rooms: Room[]) => void;
@@ -11,7 +11,7 @@ export type ClientToServerEvents = {
     leaveRoom: (roomId: number) => void;
     joinGame: (roomId: number, username: string) => void;
     leaveGame: (roomId: number, username: string) => void;
-    addCard: (roomId: number, card: string) => void;
+    addCard: (roomId: number, card: Card) => void;
     viewCard: (roomId: number, username: string) => void;
     beAdmin: (roomId: number, username: string) => void;
     revokeAdmin: (roomId: number) => void;

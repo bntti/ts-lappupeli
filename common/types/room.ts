@@ -1,8 +1,9 @@
 import { z } from 'zod';
 
+const card = z.object({ card: z.string(), player: z.string() });
 const roomDataBase = z.object({
     players: z.array(z.string()),
-    cards: z.array(z.string()),
+    cards: z.array(card),
     previousWord: z.string().nullable(),
     adminUsername: z.string().nullable(),
 });
@@ -28,4 +29,5 @@ const roomSchema = z.object({
 
 export const roomsSchema = z.array(roomSchema);
 
+export type Card = z.infer<typeof card>;
 export type Room = z.infer<typeof roomSchema>;

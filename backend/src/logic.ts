@@ -38,14 +38,17 @@ export const startRound = (room: Room): void => {
     const cardI = Math.floor(Math.random() * room.data.cards.length);
     const card = room.data.cards.splice(cardI, 1)[0];
 
+    const noCardPlayers = room.data.players.filter((player) => player !== card.player);
+    assert.ok(noCardPlayers.length > 0);
+
     room.data = {
         ...room.data,
         roundInProgress: true,
         roundPlayers: structuredClone(room.data.players),
         seen: [],
-        card,
+        card: card.card,
         starterUsername: room.data.players[Math.floor(Math.random() * room.data.players.length)],
-        noCardUsername: room.data.players[Math.floor(Math.random() * room.data.players.length)],
+        noCardUsername: noCardPlayers[Math.floor(Math.random() * noCardPlayers.length)],
     };
 };
 
