@@ -1,6 +1,6 @@
 {
     "name": "lappupeli-backend",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "scripts": {
         "build": "tsc && node ./esbuild.mjs",
         "dev": "tsx watch src/index.ts",
@@ -12,8 +12,8 @@
         "zod": "^4.1.12"
     },
     "devDependencies": {
-        "@types/express": "^5.0.3",
-        "esbuild": "^0.25.11",
+        "@types/express": "^5.0.5",
+        "esbuild": "^0.27.0",
         "tsx": "^4.20.6",
         "typescript": "^5.9.3"
     },
